@@ -176,7 +176,7 @@ export const removeImageObject = async (req, res) => {
   try {
     const { userId } = req.auth();
     const { object } = req.body;
-    const { image } = req.file;
+    const  image  = req.file;
     const plan = req.plan;
 
     if (plan !== "premium") {
@@ -224,7 +224,7 @@ export const resumeReview = async (req, res) => {
 
       const pdfData = await pdf(dataBuffer)
 
-      const prompt = `Review the following resume and provide constructive feedback on its strengths, weaknesses, and ares for improvement. Resume Content: \n\n ${pdfData.text}`
+      const prompt = `Review the following resume and provide constructive feedback on its strengths, weaknesses, and ares for improvement. Resume Content: \n\n${pdfData.text}`
 
       const response = await AI.chat.completions.create({
         model: "gemini-2.0-flash",
@@ -240,7 +240,7 @@ export const resumeReview = async (req, res) => {
   
       const content = response.choices[0].message.content;
   
-      await sql` INSERT INTO creations (user_id, prompt,content,type) VALUES (${userId}, 'Review the uploaded resume, ${content}, 'resume-review')`;
+      await sql` INSERT INTO creations (user_id, prompt,content,type) VALUES (${userId}, 'Review the uploaded resume', ${content}, 'resume-review')`;
   
       res.json({ success: true, content });
     } catch (error) {
