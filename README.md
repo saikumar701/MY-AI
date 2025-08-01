@@ -11,7 +11,7 @@ QuickAI is a powerful AI-powered platform designed to transform your content cre
 * **AI Article Writer**
 
   * Generate high-quality, SEO-friendly articles on any topic.
-  * Choose from short (200-400 words) or long (400-800 words) formats.
+  * Choose from short (500–800 words), medium (800–1200 words), and long (1200+ words) formats.
 
 * **Blog Title Generator**
 
@@ -19,7 +19,13 @@ QuickAI is a powerful AI-powered platform designed to transform your content cre
 
 * **AI Image Generator**
 
-  * Describe any scene and let AI create realistic or stylistic images (e.g., Ghibli Style).
+  Describe any scene and let AI generate:
+
+- **Realistic images**
+- **Ghibli-style illustrations**
+- **Anime-style artwork**
+- **3D-style renderings**
+
 
 * **Background & Object Removal**
 
@@ -41,6 +47,7 @@ QuickAI is a powerful AI-powered platform designed to transform your content cre
 
 * **Frontend**: React.js, Tailwind CSS
 * **Backend**: Node.js, Express.js (API)
+* **Database**: Postgres(NEON)
 * **AI Integration**: OpenAI APIs, Image Processing APIs
 * **Hosting**: Vercel
 
