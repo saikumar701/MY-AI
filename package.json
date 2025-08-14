@@ -1,0 +1,28 @@
+{
+  "name": "quickai",
+  "version": "1.0.0",
+  "description": "AI-Powered Content Creation Platform",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd quickai-client && npm run dev",
+    "server": "cd quickai-server && npm run server",
+    "build": "cd quickai-client && npm run build",
+    "install-client": "cd quickai-client && npm install",
+    "install-server": "cd quickai-server && npm install",
+    "install-all": "npm run install-client && npm run install-server"
+  },
+  "keywords": [
+    "ai",
+    "content-creation",
+    "react",
+    "nodejs",
+    "express",
+    "postgresql"
+  ],
+  "author": "Mohammad Sumon",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
